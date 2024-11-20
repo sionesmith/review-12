@@ -6,7 +6,7 @@ App.jsx
 
 ```jsx
 // Write your code here
-
+import gallery from "./components";
 ```
 
 ### 2. Object Destructuring
@@ -28,21 +28,23 @@ const props = {
 };
 
 // Write your code here
-
+const {name,packaging,temperatureProperites} = props
 
 ```
 
 ### 3. State in React
 
+* useState is a Hook, so you can only call it at the top level of your component or your own Hooks. You can’t call it inside loops or conditions. If you need that, extract a new component and move the state into it.
 
 
 ### 4. Using state in React
 
 ```jsx
-
+import {state} from 'react';
 
 function Tea(props) {
   // Add your code here
+    const [is brewing ] = useState(true);
 
 }
 ```
@@ -62,7 +64,7 @@ function Tea(props) {
   const checkTime = () => { props.steepTime > props.startTime ? alert("TEA IS DONE!"); }
 
   return <>
-    <h1>Tea Time</h1>
+    <button onClick="check time"/>
     <button>Check if tea is ready</button>
   </>
 }
